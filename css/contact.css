@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
 
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
-  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* NAVBAR SECTION */
@@ -18,6 +18,7 @@ body {
   position: fixed;
   line-height: 120px;
   text-align: center;
+  z-index: 5;
 }
 
 .nav div.logo {
@@ -28,10 +29,12 @@ body {
 }
 
 .nav div.logo a img {
+  transition: transform 0.2s;
   width: 150px;
 }
 
 .nav div.logo a img:hover {
+  transform: scale(1.1);
   filter: drop-shadow(0 0 0.5rem #f07a81);
 }
 
@@ -62,7 +65,7 @@ body {
   border-radius: 10px;
   color: #e02221;
   line-height: 65px;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
 }
 
 .nav div.main_list ul .active {
@@ -74,11 +77,73 @@ body {
 
 .home {
   width: 100%;
-  height: 300vh;
-  background-image: url(../Images/home-back.jpg);
+  /* height: 300vh; */
+  /* background-image: url(../Images/home-back.jpg);
   background-position: center top;
-  background-size: cover;
+  background-size: cover; */
+  background-color: #f4f5f5;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
 }
+
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  font-size: larger;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0.1px #25262e41;
+}
+.contact-container h4{
+  font-size: larger;
+  font-family: "Quicksand";
+}
+.cont-img{
+  background-image: url(../Images/contact-home.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  width: 30%;
+}
+.cont-right{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.cont-text p{
+  text-align: justify;
+  margin: 20px 100px 20px 100px;
+}
+
+ /* FORM  */
+.form-container input,textarea,button{
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid #f07a81;
+  width: 60%;
+}
+.form-container button{
+  font-size: large;
+  background-color: #111;
+  color: #e02221;
+  border: none;
+  font-weight: 600;
+}
+
+#contact {
+  padding: 5px;
+}
+
+#contact h4 {
+  display: block;
+}
+
+
+/* NAVBAR */
 
 .navTrigger {
   display: none;
@@ -99,7 +164,7 @@ footer {
   font-size: 16px;
 }
 
-footer * {
+footer *{
   font-family: "Quicksand", sans-serif;
   box-sizing: border-box;
   border: none;
@@ -468,4 +533,21 @@ nav li:hover::after {
   .myP {
     padding: 2%;
   }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #25262e41;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e02221;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #111;
 }
