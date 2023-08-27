@@ -28,7 +28,7 @@
             </div>
             <div id="mainListDiv" class="main_list fill">
                 <ul class="navlinks">
-                    <li><a href="/templates/index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#" class="active">Service</a></li>
                     <li><a href="/templates/about.html">About</a></li>
                     <li><a href="/templates/contact.html">Contact</a></li>
@@ -69,8 +69,12 @@
                     <input type="number" id="quantity" name="quantity" min="1" max="10" required>
                 </div>
                 <div>
-                    <label for="destination">Destination:</label>
-                    <input type="text" id="destination" name="destination" required>
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div>
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district" required>
                 </div>
                 <!-- <input type="submit" value="Submit"> -->
                 <button name="submit" type="submit" value="Submit" id="contact-submit" data-submit="...Sending">Submit</button>
@@ -78,7 +82,7 @@
         </div>
 
     </main>
-/
+
     <script src="/js/scripts.js"></script>
     <script>
         $(window).scroll(function () {
