@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapid Red</title>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/service.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
@@ -26,8 +28,8 @@
             </div>
             <div id="mainListDiv" class="main_list fill">
                 <ul class="navlinks">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="service.html">Service</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">Service</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -39,33 +41,38 @@
             </span>
         </div>
     </nav>
+    
+
+
     <!-- NAVBAR ENDS  -->
 
     <!-- MAIN SECTION  -->
-    <main class="home">
-        <div class="main-text">
-            BE THE REASON
-            FOR
-            <br>
-            <span class="red-main-text">
-                SOMEONE'S
-                HEARTBEAT
-            </span>
-        </div>
-    </main>
-
-    <script src="js/scripts.js"></script>
-    <script>
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
-    </script>
-    <!-- MAIN SECTION ENDS -->
+    <!-- <section class="home"> -->
+        <main class="service">
+                <div class="form-container">
+                    <h2>Submit Your Blood Donation Request</h2>
+                    <form action="submit_form.php" method="post">
+                        <label for="bloodGroup">Blood Group:</label>
+                        <select id="bloodGroup" name="bloodGroup" required>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select><br><br>
+                        <label for="quantity">Quantity (in units):</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+                        <label for="destination">Destination:</label>
+                        <input type="text" id="destination" name="destination" required><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            
+        </main>
+        
 
     <!-- FOOTER  -->
     <footer>
